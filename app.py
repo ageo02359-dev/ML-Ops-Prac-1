@@ -38,3 +38,11 @@ clf = Pipeline([
 clf.fit(X_train, y_train)
 y_pred = clf.predict(X_test)
 print("RMSE:", mean_squared_error(y_test, y_pred, squared=False))
+
+plt.figure()
+plt.scatter(y_test, y_pred)
+plt.xlabel("Actual Sales Amount")
+plt.ylabel("Predicted Sales Amount")
+plt.title("Actual vs Predicted Sales")
+plt.show()
+
